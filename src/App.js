@@ -1,5 +1,4 @@
 import React from 'react';
-
 //class component can have 'state'
 class App extends React.Component {
   constructor(){
@@ -31,6 +30,7 @@ App.propTypes = {
 App.defaultProps = {
   txt: "this is the default txt"
 }
+
 
 //stateless function, simple return
 //const App = () => <h1>Hello stateless</h1>

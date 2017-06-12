@@ -1,9 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { render } from 'react-dom';
 
-ReactDOM.render(
-  <App cat = {5} />,
-  document.getElementById('root')
-);
+//import StorePicker from './components/StorePicker'
 
+class StorePicker extends React.Component {
+  render() {
+    return <p>Hello</p>
+  }
+}
+
+render(<StorePicker/>, document.querySelector('#main'));
