@@ -4,8 +4,8 @@ import React from 'react';
 const Header = (props) => {
   return (
     <header className="top">
-      <h1>Jeremy Searls's Header Component</h1>
-      </header>
+      <h1>Enter Your Current Height and Weight</h1>     
+    </header>
     )
 }
 export default Header;

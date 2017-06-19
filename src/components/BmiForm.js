@@ -9,22 +9,23 @@ class BmiForm extends React.Component {
   
   calculateBmi(event) {
     event.preventDefault();
-    const lbWeight = this.weight.value;
-    const ftHeight = this.ftHeight.value;
-    const inHeight = this.inHeight.value;
+    const usMeasures = {
+      lbWeight: this.weight.value,
+      ftHeight: this.ftHeight.value,
+      inHeight: this.inHeight.value
+    }
 
-    const bmi = bmiMath(ftHeight, inHeight, lbWeight)
+    const bmi = bmiMath(
+      usMeasures.ftHeight,
+      usMeasures.inHeight,
+      usMeasures.lbWeight
+    )
+
     console.log(bmi);
   }
   render() {
     return(
       <form onSubmit={this.calculateBmi}>
-        <h1>Enter Your Current Height and Weight</h1>
-        <info className="body">
-          <select>
-            <option value="standard">US Standard</option>
-            <option value="metric">Metric</option>
-          </select>
           <h2>Enter Your Height</h2>
           <heightField>
             <input type="text" className="field" name="heightFeet" required placeholder="Enter Feet" ref={(input) => this.ftHeight = input}/>
@@ -37,7 +38,6 @@ class BmiForm extends React.Component {
           <br />
           <button type="submit" className="submit" id="calcBtn">Calculate BMI -></button>
           <p></p>
-        </info>
       </form>
     )
   }
