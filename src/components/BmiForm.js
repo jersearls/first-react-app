@@ -1,5 +1,5 @@
 import React from 'react';
-import { convertWeight,convertHeight,bmiMath } from '../helper';
+import { bmiMath } from '../helper';
 
 class BmiForm extends React.Component {
   constructor () {
@@ -13,18 +13,22 @@ class BmiForm extends React.Component {
     const ftHeight = this.ftHeight.value;
     const inHeight = this.inHeight.value;
 
-    const bmi = 
-    console.log(`Ht:${lbWeight}, Wt:${ftHeight}`);
+    const bmi = bmiMath(ftHeight, inHeight, lbWeight)
+    console.log(bmi);
   }
   render() {
     return(
       <form onSubmit={this.calculateBmi}>
-        <h1>Enter Your Current Imperial Height and Weight</h1>
+        <h1>Enter Your Current Height and Weight</h1>
         <info className="body">
+          <select>
+            <option value="standard">US Standard</option>
+            <option value="metric">Metric</option>
+          </select>
           <h2>Enter Your Height</h2>
           <heightField>
-              <input type="text" className="field" name="heightFeet" required placeholder="Enter Feet" ref={(input) => this.ftHeight = input}/>
-              <input type="text" className="field" name="heightInches" required placeholder="Enter Inches" ref={(input) => this.inHeight = input}/>
+            <input type="text" className="field" name="heightFeet" required placeholder="Enter Feet" ref={(input) => this.ftHeight = input}/>
+            <input type="text" className="field" name="heightInches" required placeholder="Enter Inches" ref={(input) => this.inHeight = input}/>
           </heightField>             
           <br />
           <h2>Enter Your Weight</h2>
@@ -32,6 +36,7 @@ class BmiForm extends React.Component {
           <br />
           <br />
           <button type="submit" className="submit" id="calcBtn">Calculate BMI -></button>
+          <p></p>
         </info>
       </form>
     )
