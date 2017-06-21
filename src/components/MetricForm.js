@@ -1,12 +1,32 @@
 import React from 'react';
+import { bmiMath } from '../helper';
+
 
 class MetricForm extends React.Component {
+  constructor () {
+    super();
+    this.calculateMetricBmi = this.calculateMetricBmi.bind(this);
+  }
+  
+  calculateMetricBmi(event) {
+    event.preventDefault();
+    const metricMeasures = {
+      kgWeight: this.kgWeight.value,
+      cmHeight: this.cmHeight.value
+    };
+    const bmi = bmiMath(
+      metricMeasures.kgWeight, 
+      metricMeasures.cmHeight
+    )
+
+    console.log(bmi);
+  }
+
   render() {
     return(
-      <form onSubmit={this.calculateBmi}>
-          <h2>Enter Your Height in Meters and Centimeters</h2>
+      <form onSubmit={this.calculateMetricBmi}>
+          <h2>Enter Your Height in Centimeters</h2>
           <heightField>
-            <input type="text" className="field" name="heightMeters" required placeholder="Enter Meters" ref={(input) => this.mHeight = input}/>
             <input type="text" className="field" name="heightCm" required placeholder="Enter Centimeters" ref={(input) => this.cmHeight = input}/>
           </heightField>             
           <br />

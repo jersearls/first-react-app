@@ -1,5 +1,5 @@
 import React from 'react';
-import { bmiMath } from '../helper';
+import { lbToKg,ftInToCm,bmiMath } from '../helper';
 
 class BmiForm extends React.Component {
   constructor () {
@@ -15,10 +15,11 @@ class BmiForm extends React.Component {
       inHeight: this.inHeight.value
     }
 
+    const cmHeight = ftInToCm(usMeasures.ftHeight, usMeasures.inHeight)
+
     const bmi = bmiMath(
-      usMeasures.ftHeight,
-      usMeasures.inHeight,
-      usMeasures.lbWeight
+      lbToKg(usMeasures.lbWeight), 
+      cmHeight
     )
 
     console.log(bmi);
