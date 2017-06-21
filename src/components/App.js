@@ -14,14 +14,13 @@ class App extends React.Component {
     };
   }
   setMeasure (uom) {
-    console.log(`You're using the ${uom} system.`);
     if (uom === "standard") {
-       console.log(`State set to the ${uom} system.`)
+       console.log(`State set to the ${uom} system. (App.js)`)
       this.setState({
         measureType: <BmiForm/>
       });
     } else {
-      console.log(`State set to the ${uom} system.`)
+      console.log(`State set to the ${uom} system. (App.js)`)
       this.setState({
         measureType: <MetricForm/>    
       });

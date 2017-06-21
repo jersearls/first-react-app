@@ -6,9 +6,8 @@ class UomSelect extends React.Component {
     this.changeMeasure = this.changeMeasure.bind(this);
   }
   changeMeasure (event){
-    event.preventDefault
-    console.log("You made a selection")
-    const selectedUom = this.uom.value
+    const selectedUom = this.uom.value;
+    console.log(`You made a selection of ${selectedUom} (UomSelect.js)`);
     this.props.setMeasure(selectedUom);
   }
   render() {
