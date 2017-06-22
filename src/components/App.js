@@ -8,25 +8,34 @@ class App extends React.Component {
   constructor () {
     super();
     this.setMeasure = this.setMeasure.bind(this);
+    this.setClassify = this.setClassify.bind(this)
     //initialstate
     this.state = {
-      measureType: <BmiForm/>
+      measureType: <BmiForm/>,
+      bmiClassify:{}
     };
   }
   setMeasure (uom) {
     if (uom === "standard") {
        console.log(`State set to the ${uom} system. (App.js)`)
       this.setState({
-        measureType: <BmiForm/>
+        measureType: <BmiForm setClassify={this.setClassify}/>
       });
     } else {
       console.log(`State set to the ${uom} system. (App.js)`)
       this.setState({
-        measureType: <MetricForm/>    
+        measureType: <MetricForm setClassify={this.setClassify}/>    
       });
     }
   }
-  
+
+  // create function that sets state based on the returned BMI score
+  // create new component to display bmi-info based on score
+  // render out bmi-info key that correlates to score
+  setClassify (bmiScore) {
+    console.log(bmiScore);
+  }
+
   render() {
     return (
       <div className="body">

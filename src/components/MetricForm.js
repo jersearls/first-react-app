@@ -19,7 +19,7 @@ class MetricForm extends React.Component {
       metricMeasures.cmHeight
     )
 
-    console.log(bmi);
+    this.props.setClassify(bmi);
   }
 
   render() {
