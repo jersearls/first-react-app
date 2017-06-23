@@ -1,10 +1,10 @@
-#BMI Calculator
+# BMI Calculator
 <br>
 This application was built to demonstrate my knowledge and understanding of the
 React framework. It showcases several different React elements as well as my
 ability to development with javascript using ES6 style and nomenclature.
 
-##App React Features:
+## App React Features:
 <br>
 - Utilization of components when appropriate
 - React Routing
@@ -15,7 +15,7 @@ ability to development with javascript using ES6 style and nomenclature.
 - Utilizing Helper functions
 - Assignment of 'state' to dynamically render page elements
 
-##ES6 Specific Features:
+## ES6 Specific Features:
 <br>
 - Arrow functions
 - ES6 classes
@@ -24,7 +24,7 @@ ability to development with javascript using ES6 style and nomenclature.
 - Modules
 - Object methods such as .keys()
 
-##Planned Features:
+## Planned Features:
 <br>
 - API calls
 - Promises
