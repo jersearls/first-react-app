@@ -2,7 +2,8 @@ import React from 'react';
 import Header from './Header';
 import BmiForm  from './BmiForm';
 import UomSelect from './UomSelect';
-import MetricForm from './MetricForm'
+import MetricForm from './MetricForm';
+import bmiInfo from '../bmi-info';
 
 class App extends React.Component {
   constructor () {
@@ -11,7 +12,7 @@ class App extends React.Component {
     this.setClassify = this.setClassify.bind(this)
     //initialstate
     this.state = {
-      measureType: <BmiForm/>,
+      measureType: <BmiForm setClassify={this.setClassify}/>,
       bmiClassify:{}
     };
   }
@@ -32,8 +33,18 @@ class App extends React.Component {
   // create function that sets state based on the returned BMI score
   // create new component to display bmi-info based on score
   // render out bmi-info key that correlates to score
+  // 18.9 > bmiScore && bmiScore > 24.9
+ 
   setClassify (bmiScore) {
-    console.log(bmiScore);
+    if (bmiScore < 18.5){
+      console.log("You're Underweight");
+    } else if (18.5 <= bmiScore && bmiScore < 25){
+      console.log("You're a healthy weight");
+    } else if (25 <= bmiScore && bmiScore < 30){
+      console.log("You're overweight");
+    } else{
+      console.log("You're obese 😞 ");
+    }
   }
 
   render() {

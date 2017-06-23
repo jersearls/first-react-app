@@ -22,7 +22,7 @@ class BmiForm extends React.Component {
       cmHeight
     )
 
-    console.log(bmi);
+    this.props.setClassify(bmi);
   }
   render() {
     return(
