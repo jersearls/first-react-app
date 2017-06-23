@@ -32,8 +32,8 @@ ability to development with javascript using ES6 style and nomenclature.
 * Productionalize app and post to public internet
 * Ejection from create React app
 
-Please visit [my linkedin page](https://www.linkedin.com/in/jeremysearls/) to
-learn more about me! Or email me [here](mailto:searls@me.com).
+
+### Please visit [my linkedin page](https://www.linkedin.com/in/jeremysearls/) to learn more about me! Or email me [here](mailto:searls@me.com).
 
 This project was bootstrapped with the create-react app.
 
