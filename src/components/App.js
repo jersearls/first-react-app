@@ -44,7 +44,7 @@ class App extends React.Component {
     } else{
       weight = bmiInfo.obese
     }
-    weight.bmi = bmiScore;
+    weight.bmi = `Your BMI is ${bmiScore}`;
     this.setState({bmiClassify : weight });
   }
 
