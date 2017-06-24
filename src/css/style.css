@@ -3,13 +3,18 @@ h1 {
   font-family: Times, serif;
   font-size: 25px;
 }
-
+img {
+    max-width: 25%;
+    height: auto;
+}
+.display {
+  width: 500px;
+}
 .body {
   color: black;
   font-family: Times, serif;
   font-size: 12px;
 }
-
 .submit {
   color: green;
   font-family: Georgia, serif;
@@ -20,11 +25,9 @@ input::placeholder {
   font-style: italic;
   font-family: Georgia, serif;
 }
-
 .field{
 margin-right: 25px;
 }
-
 .error {
   color: red;
   font-family: Georgia, serif;

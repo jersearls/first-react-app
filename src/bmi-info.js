@@ -2,7 +2,7 @@ module.exports = {
   underWeight: {
     name: 'You are underweight.',
     image: 'https://thecompleteherbalguide.com/wp-content/uploads/2016/05/Are-You-Underweight-Natural-Remedies-Just-For-You_ft-770x402.jpg',
-    desc: 'A BMI equal to or less than 18.5 is cnosidered Underweight. A lean BMI can indicate that your weight maybe too low. You should consult your physician to determine if you should gain weight, as low body mass can decrease your body\'s immune system, which could lead to ilness such as disappearance of periods (women), bone loss, malnutrition and other conditions. The lower your BMI the greater these risks become.'
+    desc: 'A BMI equal to or less than 18.5 is considered underweight. A lean BMI can indicate that your weight maybe too low. You should consult your physician to determine if you should gain weight, as low body mass can decrease your body\'s immune system, which could lead to ilness such as disappearance of periods (women), bone loss, malnutrition and other conditions. The lower your BMI the greater these risks become.'
   },
   normalWeight: {
     name: 'You are a normal weight.',
