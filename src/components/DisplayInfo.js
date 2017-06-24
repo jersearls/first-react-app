@@ -2,13 +2,15 @@ import React from 'react';
 
 class DisplayInfo extends React.Component {
   render(){
+    //es6 destructuring
+    const { bmiResult } = this.props
   return (
     <info>
-      <ul className="display">{this.props.bmiResult.bmi}</ul>
-      <ul className="display">{this.props.bmiResult.name}</ul>
-      <ul className="display">{this.props.bmiResult.desc}</ul>
+      <ul className="display">{bmiResult.bmi}</ul>
+      <ul className="display">{bmiResult.name}</ul>
+      <ul className="display">{bmiResult.desc}</ul>
       <br />
-      <img src={this.props.bmiResult.image} alt={this.props.bmiResult.name}/>
+      <img src={bmiResult.image} alt={bmiResult.name}/>
     </info>
   )}
 }

@@ -19,6 +19,7 @@ ability to development with javascript using ES6 style and nomenclature.
 
 * Arrow functions
 * ES6 classes
+* Destructuring assignment
 * Using constructors, and .bind when necessary
 * Template strings
 * Modules
