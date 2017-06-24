@@ -36,16 +36,20 @@ class App extends React.Component {
   // 18.9 > bmiScore && bmiScore > 24.9
  
   setClassify (bmiScore) {
+    let weight = {}
     if (bmiScore < 18.5){
-      console.log("You're Underweight");
+      weight = bmiInfo.underWeight
     } else if (18.5 <= bmiScore && bmiScore < 25){
-      console.log("You're a healthy weight");
+      weight = bmiInfo.normalWeight 
     } else if (25 <= bmiScore && bmiScore < 30){
-      console.log("You're overweight");
+      weight = bmiInfo.overWeight
     } else{
-      console.log("You're obese 😞 ");
+      weight = bmiInfo.obese
     }
+    weight.bmi = bmiScore;
+    this.setState({bmiClassify : weight });    
   }
+  
 
   render() {
     return (
