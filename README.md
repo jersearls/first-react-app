@@ -34,7 +34,7 @@ ability to development with javascript using ES6 style and nomenclature.
 * User login
 
 ###
-Visit the app at [jeremysearls.com](https://www.jeremysearls.com)
+Visit the app at [jeremysearls.com](www.jeremysearls.com)
 
 Please visit [my linkedin page](https://www.linkedin.com/in/jeremysearls/) to learn more about me! Or email me [here](mailto:searls@me.com).
 
