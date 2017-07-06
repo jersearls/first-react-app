@@ -5,6 +5,7 @@ import UomSelect from './UomSelect';
 import MetricForm from './MetricForm';
 import bmiInfo from '../bmi-info';
 import DisplayInfo from './DisplayInfo';
+import Footer from './Footer';
 
 class App extends React.Component {
   constructor () {
@@ -56,6 +57,9 @@ class App extends React.Component {
           <UomSelect setMeasure={this.setMeasure}/>
           {this.state.measureType}
           <DisplayInfo bmiResult={this.state.bmiClassify}/>
+          <br />
+          <br />
+          <Footer/>
         </div>
       </div>
     )

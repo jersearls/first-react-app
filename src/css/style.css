@@ -1,7 +1,7 @@
 h1 {
   color: blue;
   font-family: Times, serif;
-  font-size: 25px;
+  font-size: 40px;
 }
 img {
     max-width: 25%;
@@ -13,7 +13,13 @@ img {
 .body {
   color: black;
   font-family: Times, serif;
-  font-size: 12px;
+  font-size: 22px;
+}
+.footer {
+  color: black;
+  font-family: Times, serif;
+  font-style: italic;
+  font-size: 30px;
 }
 .submit {
   color: green;
